@@ -1,2 +1,10 @@
 ---
 # tasks file for git
+- name: Add git ppa repository
+  ansible.builtin.apt_repository:
+    repo: ppa:git-core/ppa
+- name: install git
+  ansible.builtin.apt:
+    name: git
+    state: present
+    update_cache: true
