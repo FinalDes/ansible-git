@@ -4,6 +4,28 @@ Git
 Install git using official packages
 
 
+## Requirements
+add this into requirements.yml
+```yaml
+---
+roles:
+  - name: finaldes.git
+    version: main
+    src: https://github.com/FinalDes/ansible-git.git
+    scm: git
+```
+or
+```yaml
+---
+roles:
+  - name: finaldes.git
+    version: main
+    src: git@github.com:FinalDes/ansible-git.git
+    scm: git
+```
+then run ` ansible-galaxy install -r requirements.yml `
+
+
 Example Playbook
 ----------------
 
