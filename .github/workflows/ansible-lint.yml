@@ -34,6 +34,9 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v6
 
+      - name: set ansible config
+        run: printf '[defaults]\nroles_path=../' >ansible.cfg
+
       - name: Read python version from file
         id: get-python-version
         run: echo "python_version=$(cat .python-version)" >> "$GITHUB_OUTPUT"
